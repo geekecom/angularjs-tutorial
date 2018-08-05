@@ -6,6 +6,8 @@ angular.
   component('phoneList', {
     template:
         '<ul>' +
+	  '<p>Total number of phones: {{$ctrl.phones.length}}</p>' +
+	  '<ul>' +
           '<li ng-repeat="phone in $ctrl.phones">' +
             '<span>{{phone.name}}</span>' +
             '<p>{{phone.snippet}}</p>' +
@@ -22,6 +24,10 @@ angular.
         }, {
           name: 'MOTOROLA XOOM™',
           snippet: 'The Next, Next Generation tablet.'
+        },
+	{
+          name: 'iPhone',
+          snippet: 'Apple\'s phone.'
         }
       ];
     }
